@@ -15,20 +15,36 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate stats card
+      - name: Generate stats card (dark)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
           options: username=prjvvl&show_icons=true&theme=transparent&bg_color=0b0e2e&title_color=ffffff&icon_color=2331c7&text_color=a3aae0&border_color=1f2547&hide_border=false
-          path: profile/stats.svg
+          path: profile/stats-dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate top languages card
+      - name: Generate stats card (light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=prjvvl&show_icons=true&theme=transparent&bg_color=f6f7fb&title_color=14183f&icon_color=2331c7&text_color=565d8c&border_color=e2e4f0&hide_border=false
+          path: profile/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card (dark)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
           options: username=prjvvl&layout=compact&theme=transparent&bg_color=0b0e2e&title_color=ffffff&text_color=a3aae0&border_color=1f2547&hide_border=false&langs_count=6
-          path: profile/top-langs.svg
+          path: profile/top-langs-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card (light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=prjvvl&layout=compact&theme=transparent&bg_color=f6f7fb&title_color=14183f&text_color=565d8c&border_color=e2e4f0&hide_border=false&langs_count=6
+          path: profile/top-langs-light.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cards

@@ -1,4 +1,4 @@
-<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="220" viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="glow" cx="50%" cy="0%" r="75%">
       <stop offset="0%" stop-color="#2331c7" stop-opacity="0.45" />
@@ -31,27 +31,6 @@
           font-size: 18px;
           fill: #a3aae0;
         }
-        .mark rect {
-          fill: none;
-          stroke: #ffffff;
-          stroke-width: 2.4;
-          rx: 3;
-        }
-        .mark {
-          animation: float 4s ease-in-out infinite;
-        }
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-6px); }
-        }
-        .mark-bg {
-          fill: #2331c7;
-          animation: mark-glow 4s ease-in-out infinite;
-        }
-        @keyframes mark-glow {
-          0%, 100% { filter: drop-shadow(0 0 0px rgba(35,49,199,0.6)); }
-          50% { filter: drop-shadow(0 0 14px rgba(35,49,199,0.9)); }
-        }
         .cursor {
           animation: blink 1s step-end infinite;
         }
@@ -63,19 +42,9 @@
     </style>
   </defs>
 
-  <rect class="bg" width="1200" height="300" />
+  <rect class="bg" width="1200" height="220" />
   <circle class="glow" cx="600" cy="0" r="260" fill="url(#glow)" />
 
-  <g class="mark" transform="translate(120, 96)">
-    <rect class="mark-bg" width="72" height="72" rx="18" />
-    <g transform="translate(14.5,14.5) scale(1.79)">
-      <rect x="3" y="3" width="7" height="7" rx="1.4" />
-      <rect x="14" y="3" width="7" height="7" rx="1.4" />
-      <rect x="14" y="14" width="7" height="7" rx="1.4" />
-      <rect x="3" y="14" width="7" height="7" rx="1.4" />
-    </g>
-  </g>
-
-  <text x="230" y="145" class="title">Prajwal Jadhav<tspan class="cursor">_</tspan></text>
-  <text x="230" y="180" class="subtitle">SDE3 @ Walmart · GenAI + agentic systems</text>
+  <text x="600" y="110" text-anchor="middle" class="title">Prajwal Jadhav<tspan class="cursor">_</tspan></text>
+  <text x="600" y="145" text-anchor="middle" class="subtitle">SDE3 @ Walmart · GenAI + agentic systems</text>
 </svg>
